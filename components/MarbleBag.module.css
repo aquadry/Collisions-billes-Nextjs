@@ -1,0 +1,33 @@
+
+.marbleBag {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 80px;
+  height: 80px;
+  background-color: #8B4513;    
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: sans-serif;
+  font-size: 14px;
+  text-align: center;
+  line-height: 1.2;
+  padding: 5px;
+  box-sizing: border-box;
+  user-select: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 1000;
+  transition: transform 0.2s;
+}
+
+.marbleBag:hover {
+  transform: scale(1.05);
+}
+
+.marbleBag:active {
+  transform: scale(0.95);
+}

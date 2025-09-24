@@ -1,0 +1,155 @@
+/* ===== app/components/GravityControls.module.css ===== */
+.controls {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(0,0,0,0.6);
+  padding: 15px;
+  border-radius: 15px;
+  color: white;
+  font-family: sans-serif;
+  font-size: 12px;
+  min-width: 250px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.2);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.controls:hover {
+  background: rgba(0,0,0,0.75);
+  box-shadow: 0 12px 48px rgba(0,0,0,0.4);
+  transform: translateY(-2px);
+}
+
+.controls.dragging {
+  transition: none;
+  cursor: move;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  cursor: move;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFD700;
+  margin: 0;
+}
+
+.collapseBtn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.collapseBtn:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+.content {
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.collapsed .content {
+  max-height: 0;
+  opacity: 0;
+  margin-bottom: 0;
+}
+
+.controlGroup {
+  margin-bottom: 15px;
+}
+
+.controlGroup h4 {
+  margin: 0 0 8px 0;
+  color: #FFD700;
+  font-size: 14px;
+}
+
+.gravityButtons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.gravityBtn {
+  background: #444;
+  border: 1px solid #666;
+  color: white;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 11px;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.gravityBtn:hover {
+  background: #555;
+}
+
+.gravityBtn.active {
+  background: #FFD700;
+  color: black;
+}
+
+.sliderContainer {
+  margin-bottom: 10px;
+}
+
+.slider {
+  width: 100%;
+  margin-top: 5px;
+}
+
+.presetButtons {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.presetBtn {
+  background: #2A5490;
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 11px;
+  transition: background 0.2s;
+}
+
+.presetBtn:hover {
+  background: #3A6590;
+}
+
+.marbleInfo {
+  margin-top: 15px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  text-align: center;
+  font-size: 14px;
+  color: #FFD700;
+  font-weight: bold;
+}
